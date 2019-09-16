@@ -1,0 +1,10 @@
+<div class="example-list">
+  <div class="example-box" *ngFor="let movie of fixMovies" >
+    {{movie.title}} ---
+  </div>
+</div>
+<div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+  <div class="example-box allow-list" *ngFor="let movie of movies" cdkDrag>
+    {{movie.title}}
+  </div>
+</div>
